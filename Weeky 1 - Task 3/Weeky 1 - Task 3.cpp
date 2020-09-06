@@ -5,12 +5,10 @@
 #include <conio.h>
 
 int age;
-bool sw = false;
 
-int a = 20;
-int b = 40;
-int c = 59;
-int d = 60;
+int age_20 = 20;
+int age_40 = 40;
+int age_59 = 59;
 
 int main()
 {
@@ -18,18 +16,21 @@ int main()
 
     std::cin >> age;
 
-    if (age < a) {
+    if (age < age_20) {
         std::cout << " You are young.\n";
     }
 
-    else if (age >= a || age == b) {
-        std::cout << " You are a grown up.\n";
+    //if age is greater than a or equal to b//
+        else if (age >= age_20 && age <= age_40) { 
+            std::cout << " You are a grown up.\n";
     }
 
-    else if (age > b || age <= c) {
-        std::cout << " You are old. \n";
+    //if age is greater than b or equal/less than c//
+        else if (age > age_40 && age <= age_59) { 
+            std::cout << " You are old. \n";
     }
-    else if (age > d) {
-        std::cout << " You ARE really old. \n";
+    //if age is greater than c//
+        else if (age > age_59) { 
+            std::cout << " You ARE really old. \n";
     }
 }
